@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/0caecc1729.js" crossorigin="anonymous"></script>
+    
+
+
+</head>
+
+<body>
+    <!-- Nav -->
+    <nav>
+        <div id="logo">
+            <a href="index.html">
+                <img src="./Resources/Imgs/logo-search-grid-2x.png">
+      
+            </a>
+        </div>
+
+        <!-- For smaller widths -->
+        <div class="dropdown">
+            <i id="navbar" class="fa-solid fa-bars fa-2x"></i>
+            <div class="dropdown-content">
+                <a href="favorites.html">Favorites</a>
+                <div class="nested-dropdown">
+                    <a href="">Cuisine</a>
+                    <div class="nested-dropdown-content">
+                        <a href="#">East Asian</a>
+                        <a href="#">South Asian</a>
+                        <a href="#">Mexican</a>
+                        <a href="">Spanish</a>
+                        <a href="">Italian</a>
+                    </div>
+                </div>
+                <a href="healthy.html">Healthy</a>
+                <a href="breakfast.html">Breakfast</a>
+                <a href="about-me.html">About Me</a>
+                <a href="cooking-help.html">Cooking Help</a>
+
+            </div>
+        </div>
+        
+        <!-- standard navigation look -->
+        <ul class="nav-list">
+            <li>
+                <button class="std-btn">
+                    <a href="favorites.html">Favorites</a>
+            </li>
+            </button>
+
+            <li>
+                <div class="dropdown">
+                    <button class="std-btn">Cuisine</button>
+                    <div class="dropdown-content">
+                        <a href="#">East Asian</a>
+                        <a href="#">South Asian</a>
+                        <a href="#">Mexican</a>
+                        <a href="">Spanish</a>
+                        <a href="">Italian</a>
+                        
+                    </div>
+                </div>
+            </li>
+            <li>
+                <button class="std-btn">
+                    <a href="healthy.html">Healthy</a>
+                </button>
+
+            </li>
+            <li>
+                <button class="std-btn">
+                    <a href="breakfast.html">Breakfast</a>
+                </button>
+            </li>
+            <li>
+                <button class="std-btn">
+                    <a href="./about-me.html">About Me</a>
+                </button>
+            </li>
+            <li>
+                <button class="std-btn">
+                    <a href="cooking-help.html">Cooking Help</a>
+                </button>
+            </li>
+        </ul>
+
+    </nav>
+
+    <div class="main-content">
+        <div id="about-me" class="card">
+            <div class="card-content">
+                <h1>About Me</h1>
+                <img
+                    src="https://images.sidearmdev.com/resize?url=https%3a%2f%2fdxbhsrqyrr690.cloudfront.net%2fsidearm.nextgen.sites%2fathletics.amherst.edu%2fimages%2f2023%2f9%2f1%2fHeadshots_Fynn_Hayton-Ruffner.png&width=300&type=png">
+                <div class="accordion">
+                    <div class="acc-content">
+                        <div class="question">
+                            What is my favorite sport?
+                        </div>
+                        <div class="answer">
+                            My favorite sport is soccer.
+                        </div>
+                    </div>
+                    <div class="acc-content">
+                        <div class="question">
+                            What is my favorite color?
+                        </div>
+                        <div class="answer">
+                            My favorite color is blue.
+                        </div>
+                    </div>
+                    <div class="acc-content">
+                        <div class="question">
+                            Fun Fact?
+                        </div>
+                        <div class="answer">
+                            In progress.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <video class="background-vid" autoplay loop muted width="100%" height="100%">
+        <source src="./Resources/Videos/chopping.mp4" />
+        <source src="./Resources/pizza.mp4" />
+        <source src="./Resources/dumplings.mp4" />
+        <source src="./Resources/searing.mp4" />
+    </video>
+
+
+    <footer>
+        <div class="footer-content">
+
+            <div class="main-footer">
+                <div class="mfooter-content-left">
+
+                    <span><i class="fa-solid fa-location-dot"></i> Albany CA 94706</span>
+                    <span><i class="fa-solid fa-phone"></i> I'm not giving you my number lol </span>
+
+
+                </div>
+                <div class="mfooter-content-right">
+                    <form action="#" method="POST" class="formcarry-form">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="fullName" required />
+
+                        <label for="email">Your Email Address</label>
+                        <input type="email" id="email" name="email" required />
+                        <button type="submit">Send</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="bottom-bar">
+                <div class="bottom-bar-left">
+                    <span style="font-size: 10px;"> Fynn Hayton-Ruffner <i class="fa-regular fa-copyright fa-xs"></i>
+                        2024</span>
+                </div>
+                <div class="bottom-bar-contacts">
+                    <span style="font-size: 12px;">Find me:
+                        <a target="_blank" href="https://www.instagram.com/fynn_rhr/"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <i class="fa-brands fa-twitter"></i>
+                        <a target="_blank" href="https://www.linkedin.com/in/fynn-hayton-ruffner-514020299/"><i
+                                class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.youtube.com/channel/UC5RrNfhG-Q-T2oHcRfacU5w" target="_blank"><i
+                                class="fa-brands fa-youtube"></i></a>
+                    </span>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+
+    <script >
+        const accordion = document.getElementsByClassName('acc-content');
+
+
+        for(let i = 0; i < accordion.length;i++){
+            accordion[i].addEventListener("click", function (){
+            console.log('clicked a question')
+            this.classList.toggle('active');
+        })
+        };
+
+            
+    </script>
+</body>
+
+</html>

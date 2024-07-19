@@ -1,0 +1,49 @@
+
+
+#table-div{
+    position: relative;
+    top: 6rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+    
+    
+}
+td img {
+    max-width:100px;
+    text-decoration: none;
+    transition: transform 0.2s;
+}
+td img:hover{
+    transform: scale(2.5)
+    
+}
+
+.recipe-table{
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 10px ;
+    font-size: 1em;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5) ;
+}
+
+.recipe-table thead tr{
+    background-color:rgb(28, 177, 170); ;
+    color:white;
+    text-align: left;
+    font-weight: bold;
+}
+.recipe-table th, .recipe-table td{
+    padding: 12px 15px
+
+}
+.recipe-table tr{
+    border-bottom: 1px solid grey;
+}
+.recipe-table tr:last-of-type{
+    border-bottom: 2px solid rgb(28, 177, 170);
+}
+

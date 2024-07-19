@@ -1,0 +1,815 @@
+
+
+@font-face {
+  font-family: 'global';
+  src: url('./Resources/Josefin_Sans/JosefinSans-Italic-VariableFont_wght.ttf') format('truetype');
+}
+
+*{
+  font-family: 'global';
+}
+
+body{
+    margin: 0px 0px;
+    height: 100vh;
+    width: 100v;
+    
+
+}
+
+nav,#logo,#logo img, #title, #navbar,  .nav-list{
+    height:60px;
+}
+nav{
+    background-color: rgb(1,100,100, 0.7);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position:fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    color:rgb(253, 249, 249);
+    height: 75px;
+    filter:drop-shadow(10px);
+    backdrop-filter: blur(5px);
+    
+        
+}
+
+#logo{
+    width:10%;
+    padding: 0.4rem;
+    
+    border-radius: 0.2rem;  
+    min-width: 50px;
+    max-width: 70px;
+   
+    
+}
+#logo img{
+    width: 100%;
+    border-radius: 5px;
+    
+}
+
+#navbar{
+    display: none;
+    padding-right: 1rem;
+}
+
+#navbar:hover, .dropdown-content:hover {
+  color:  rgb(59,69,59, 0.9);
+}
+
+.nav-list{
+   
+    display: flex;
+    gap: 0.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0.5rem;
+    justify-content: space-between;
+    flex-grow: 1;
+    align-items: center;
+    border-radius: 5px;
+    
+  
+}
+
+.nav-list li a{
+    padding: 5px;
+    flex-shrink: 1;
+    flex-grow: 1; 
+    text-decoration: none;
+    color:rgb(253, 249, 249);
+}
+/* Button styles */
+.std-btn {
+    color:rgb(253, 249, 249);
+    padding: 8px;
+    font-size: 1rem;
+    border: none;
+    background-color: rgb(241, 246, 248,0);
+    border-radius: 20px;
+    border: 5px solid rgb(255,255,255,0.8);
+    transition: 0.4s;
+  }
+
+  .std-btn:hover {
+    font-size: 1.1rem;
+    background-color: rgb(81,79,79,0.8);
+    border: 5px solid rgb(255,255,255,1)
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content, .nested-dropdown-content {
+    position: absolute;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.6);
+    z-index: 1;
+    background-color: rgb(59,69,59, 0.9); 
+    border-radius: 5px;
+    overflow: hidden;
+    max-height: 0px;
+    transition: 0.6s;
+    
+    
+  }
+  
+  .nested-dropdown-content{
+    background-color: rgb(59,69,59, 1); 
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.6);
+    z-index: 1;
+    border-radius: 5px;
+    left:1.3rem;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a, .nested-dropdown-content a {
+    color: rgb(242, 194, 132);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  .dropdown:hover .dropdown-content{
+    max-height: 130px;
+  }
+  
+
+/* main content below nav */
+
+
+
+/*on index page*/
+.backgroundImg{
+  background-image: url('https://static01.nyt.com/images/2024/06/21/multimedia/cr-Creamy-Coconut-Rice-With-Tomatoesrex-cfgt/cr-Creamy-Coconut-Rice-With-Tomatoesrex-cfgt-threeByTwoMediumAt2X.jpg?width=1280&quality=75&auto=webp');
+  background-size: cover; /* Adjusts the background image size to cover the container */
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 4.2rem;
+  width: 100%;
+  height: 100%;
+  filter: blur(4px);
+  z-index: -1;
+ 
+}
+
+.main-content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    position: relative;
+    top: 4.2rem;   
+    width:100%; 
+}
+.card{
+    width: 35%;
+    height: auto;
+    color:rgb(253, 249, 249);
+    background-color: rgb(1,100,100, 0.7);
+    text-align: center;
+    min-width: 250px;
+    margin:1rem;
+    border-radius: 10px; 
+    min-height: 0;   
+}
+
+.card-content{
+    padding: 0.1rem 1rem;
+    color: rgb(242, 194, 132)
+    
+}
+.card img{
+    width: 80%; 
+    border: 5px solid white; 
+    border-radius: 10px;
+}
+
+/* on about-me.html*/
+.background-vid{
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  bottom:0;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.accordion{
+  background-color: rgb(242, 246, 244);
+  padding: 10px;
+  padding-right: 50px;
+  text-align: left;  
+  border-radius: 7px;
+  color:rgb(239, 216, 216);
+  margin:20px 5px;
+  
+}
+.acc-content{
+  padding: 10px 10px;
+  width: 100%;
+  background-color: rgb(72, 56, 110);
+  text-wrap: wrap;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.acc-content .question{
+  padding: 10px 0px;
+  position: relative;
+  font-size: 1em;
+  transition: 0.2s;
+  border-bottom: 1px solid ;
+  text-align: left;
+  
+  
+}
+.acc-content .question::after {
+  content: '+';
+  position: absolute;
+  right: 10px; 
+}
+
+.acc-content .answer{
+  width:100%;
+  line-height: 1.5rem;
+  word-wrap:break-word;
+  font-size: 1.2em;
+  transition: 0.5s;
+  
+  /* hidden from view if not active */
+  max-height:0px;
+  overflow: hidden;
+  padding-top: 10px;
+
+}
+
+.acc-content.active .answer {
+  max-height: 120px;
+}
+.acc-content.active .question{
+  font-size: 0.8em;
+  
+}
+.acc-content.active .question::after{
+  content:'-';
+  font-size: 2em;
+}
+
+
+#tools{
+  display: flex;
+  align-items: flex-start;
+  padding: 20px 10px;
+  width: 100%;
+  justify-content: space-between;
+  gap: 3rem;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-top: 3.5rem;
+  backdrop-filter: blur(2px);
+  
+  
+}
+
+#timer-section, #todo-list{
+  flex: 1 1 45%;
+  min-height: 100px;
+  box-shadow: 1px 2px 10px;
+}
+
+
+/* cooking-help.html and Timer Styling:  */
+      /*So I have controls, timer, timer-display, play-btn, pause-btn, reset-btn
+        and trash-btn classes to manipulate here
+        Timer elements are broken up into timer-display and control divs, control
+        includes all the buttons*/
+
+#alarm-clock{
+  
+  position: absolute;
+  z-index: 100; 
+  width: 100px;
+  top: -35px;
+  right: -40px;
+  offset-distance: 0%;
+  offset-rotate: 0deg;
+  padding: 0;
+  margin: 0;
+  /* offset-path: path("M-100,-200 L45,35"); */
+  
+
+}
+
+/* for vibrate: animation: vibrate 0.3s ease-in-out infinite; 
+   for moveInCircle: animation: moveInCircle 1s linear infinite;
+   for moveAlongPath: animation: moveAlongPath 3s linear forwards;
+
+   offset-path: path("M-500,-800 L45,35");
+*/
+
+@keyframes moveAlongPath {
+  to {
+    offset-distance: 100%;
+    offset-rotate: 20deg;
+  }
+}
+
+@keyframes moveInCircle {
+   from{
+    transform: rotate(0deg);
+   }
+   to{
+    transform: rotate(360deg);
+   }
+}
+
+@keyframes vibrate {
+  0%, 100%{
+
+    transform: rotate(30deg);
+  }
+  50%{
+    transform: rotate(-60deg);
+  }
+  
+}
+
+@keyframes clockIn {
+  0%{
+    transform: scale(0);
+    
+  }
+  50%{
+    transform: scale(1.8);
+   
+  }
+  100%{
+    transform: scale(1);
+   
+  }
+}
+
+@keyframes clockOut{
+  0%{
+    transform: scale(1);
+    
+  }
+  50%{
+    transform: scale(1.8);
+   
+  }
+  100%{
+    transform: scale(0);
+  }
+
+}
+
+
+#alarm-clock img{
+  width: 100%;
+}
+
+
+#timer-section{
+  position: relative;
+  background-color: rgba(14, 116, 139, 0.8);
+  padding: 5px 5px; 
+  border-radius: 8px;
+  
+}
+
+#input-timer{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;  
+  
+}
+
+#hours, #minutes, #seconds, #optional-title{
+  border: none;
+  border-radius: 5px;
+  margin: 3px;
+  padding: 7px;
+  font-size: 1em;
+
+}
+
+.timer{
+  padding: 10px 5px;
+  background-color: rgb(254, 251, 251);
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  border-radius: 5px;
+}
+
+@keyframes flashRed {
+  0%{background-color: white;}
+  50%{background-color: rgb(249, 65, 65);}
+  100%{background-color: white;}  
+}
+.timer.flash-red{
+  animation: flashRed 1s infinite;
+}
+.timer-title{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.timer-display{
+  font-size: 1.5em;
+}
+
+.controls{
+  display:flex;
+  justify-content: space-between;
+  width: 50%;
+}
+
+
+/* control button stylings*/
+.play-btn, #add-timer, #add-task{
+  color: green;
+  background-color: white;
+  border: 1px solid green;
+  border-radius: 5px;
+}
+.play-btn:hover, #add-timer:hover, #add-task:hover{
+  color:white;
+  background-color: green;
+}
+
+.pause-btn {
+  color: orange;
+  background-color: white;
+  border: 1px solid orange;
+  border-radius: 5px;
+}
+.pause-btn:hover{
+  color:white;
+  background-color: orange;;
+}
+
+.reset-btn {
+  color: grey;
+  background-color: white;
+  border: 1px solid grey;
+  border-radius: 5px;
+}
+.reset-btn:hover{
+  color:white;
+  background-color: grey;;
+}
+
+.trash-btn {
+  color: red;
+  background-color: white;
+  border: 1px solid red;
+  border-radius: 5px;
+}
+.trash-btn:hover{
+  color: white;
+  background-color: red;
+}
+
+.play-btn, .pause-btn, .reset-btn, .trash-btn {
+  transition: 0.3s; 
+}
+.play-btn:active, .pause-btn:active, .reset-btn:active, .trash-btn:active{
+  background-color: rgb(238, 244, 246);
+}
+
+
+/* todo list styling */
+
+#todo-list{
+  width: 45%;
+}
+#list-header{
+  padding: 5px;
+  background-image: url('https://img.freepik.com/free-photo/top-view-arrangement-natural-material-stationery_23-2148898233.jpg?size=626&ext=jpg&ga=GA1.1.1518270500.1718323200&semt=ais_user');
+}
+#list-header h1{
+  backdrop-filter: blur(2px);
+}
+#add-item-section{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  
+}
+#input-task{
+  padding: 7px;
+  border-radius: 5px;
+  border: none;
+  width: 50%;
+  font-size: 1.2em;
+}
+
+.task{
+  display: flex;
+  padding: 10px 5px;
+  justify-content: space-between;
+  background-color: rgb(231, 189, 144);
+  color: white;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.task-text{
+  text-decoration: none;
+}
+.task-text.completed{
+  text-decoration: line-through;
+  color:rgb(130, 227, 130);
+}
+.check-btn{
+  background-color: white;
+  color: rgb(124, 198, 124);
+  border: 1px solid rgb(124, 198, 124);
+  border-radius: 5px;
+  transition: 0.3s
+}
+.check-btn:hover{
+  color:white;
+  background-color: rgb(124, 198, 124);;
+}
+.check-btn:active{
+  background-color: white;
+}
+
+
+/* Breakfast.html*/
+
+#breakfast-intro{
+  
+  position: relative;
+  height: 800px;
+  top: 4rem;
+  margin: 0;
+  
+  
+}
+.breakfast-intro-content{
+  position:relative;
+  top: 19rem;
+  color: white;
+  padding:1rem;
+  width: 35%;
+  backdrop-filter: blur(10px);
+  border-radius: 50px;
+  min-width: 180px;
+  margin: 10px;
+  line-height: 1.3em;
+
+  
+}
+#breakfast-header{
+  z-index: 10;
+  font-size: 1.5em;
+  position: relative;
+}
+.learn-more{
+  border-radius: 7px;
+  border: 2px solid black;
+  padding:7px;
+  margin:1rem 0.5rem;
+  transition: 0.3s;
+  background-color: white;
+  
+}
+
+.learn-more:hover{
+  transform: scale(1.1);
+}
+.learn-more a{
+  text-decoration: none;
+  color: black;
+
+}
+
+#coffee-pour{
+  position: absolute;
+  top:0;
+  z-index: -1;
+  width: 100%;
+  height: 800px;
+  object-fit: cover;
+  
+}
+
+#breakfast-slideshow{
+  position:relative;
+  
+  background-color: rgb(165, 161, 161,0.5);
+  
+  margin-top: 4rem;
+  width:100%;
+  height:500px;
+  
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 10rem;
+  padding:0px; 
+}
+
+#slide{
+  width: 100%;
+  height: 80%;
+  background-color: white;
+  overflow: hidden;
+  opacity: 1;
+  transition: 0.5s ease;
+  animation: fadeIn 1s; 
+}
+
+@keyframes fadeIn {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+  
+}
+@keyframes fadeOut {
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+  
+}
+
+#slide img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  margin: auto;
+}
+
+#next-slide, #prev-slide{
+  position: relative;
+  width:2rem;
+  border-radius: 8px;
+  height:2rem;
+  background-color: rgb(165, 161, 161,0.5);
+  border: none;
+  padding:30px 0px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#next-slide:hover, #prev-slide:hover{
+  background-color: rgb(165, 161, 161,0.8);
+  color:white;
+}
+
+
+
+
+
+
+
+
+/* more general stuff */
+.page-title{
+  position: relative;
+  top: 5rem;
+  text-align: center;
+  color:rgb(242, 194, 132);
+  border-bottom: 5px solid rgb(1,100,100, 0.7) ;
+  margin-bottom: 1rem;
+}
+
+.page-description{
+  width: 75%;
+  text-align: center;
+  background-color: rgb(242, 194, 132);
+  color: white;
+  border-radius: 9px;
+  padding: 10px 5px;
+  margin-top: 3.5rem;
+  font-size: 1.3em;
+  line-height: 1.5em;
+  box-shadow: 1px 1px 10px black;
+}
+
+
+.recipe-description a{
+  color: white; 
+}
+
+#home-intro{
+  border: 2px solid rgb(1,100,100, 1);
+  width: 70%;  
+}
+
+#about-me{
+  width:90%;
+  margin-bottom: 10rem;
+  
+}
+#about-me img{
+  max-width: 50%;
+}
+
+
+/* Styling the footer */
+
+footer{
+  z-index: 10;
+  position: relative;
+  top: 10rem;
+  background-color: rgb(1,100,100, 1);
+  color: rgb(242, 194, 132)
+}
+
+.main-footer{
+  display:flex;
+  justify-content: space-between;
+  font-size: 10px;
+  
+}
+
+.mfooter-content-left{
+  font-size: 10px;
+  padding: 0.6rem 0.5rem;
+  border-right: 1px solid rgb(221, 217, 196);
+  display: flex;
+  flex-wrap:wrap;
+  gap:1rem
+  
+}
+.mfooter-content-right{
+  padding:1rem 0.5rem
+  
+}
+
+
+
+
+.bottom-bar{
+  background-color: rgb(2, 81, 81);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.bottom-bar-left, .bottom-bar-contacts{
+  padding: 0.5rem;
+ 
+}
+
+.bottom-bar-contacts a{
+  color: rgb(242, 194, 132)
+}
+
+
+
+  /* media queries */
+
+  @media screen and (max-width: 650px)  {
+    .nav-list{
+        display: none;
+       
+    }
+    
+    #navbar{
+        display: block;
+        padding-top: 1rem;
+   
+    }
+
+    nav{
+      justify-content: flex-start;
+      gap: 2rem;
+    } 
+    .dropdown:hover .dropdown-content{
+      max-height: 250px;
+      overflow: visible;
+    }
+    
+
+    .nested-dropdown:hover .nested-dropdown-content{
+      max-height: 300px;
+      
+    }
+  }
+
+  /* @media screen and (max-width: 300px){
+    .nested-dropdown-content{
+      left:1.3rem;
+    }
+  } */
