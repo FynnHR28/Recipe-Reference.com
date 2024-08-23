@@ -113,8 +113,7 @@ nav{
     overflow: hidden;
     max-height: 0px;
     transition: 0.6s;
-    
-    
+   
   }
   
   .nested-dropdown-content{
@@ -183,7 +182,7 @@ nav{
 }
 .card img{
     width: 80%; 
-    border: 5px solid black; 
+    border: 5px solid white; 
     border-radius: 10px;
 }
 
@@ -604,21 +603,37 @@ nav{
   
 }
 
+#slideshow-wrapper{
+  background-color: rgba(68, 122, 78, 0.5);
+  height: 500px;
+}
+
 #breakfast-slideshow{
   position:relative;
-  
-  background-color: rgb(165, 161, 161,0.5);
-  
   margin-top: 4rem;
   width:100%;
   height:500px;
-  
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 10rem;
-  padding:0px; 
+  gap: 0.4rem;
+}
+
+#slideshow-label{
+  backdrop-filter: blur(10px);
+  border-radius: 25px;
+  min-width: 180px;
+  margin: 10px;
+  line-height: 1.3em;
+  color: black;
+  position: relative;
+  top: -11rem;
+  width: 20%;
+  padding: 10px;
+  color:rgb(25, 15, 63);
+  
 }
 
 #slide{
@@ -656,6 +671,8 @@ nav{
   object-fit: cover;
   z-index: -1;
   margin: auto;
+  border-radius: 4px;
+  border: 4px solid rgb(227, 156, 145);
 }
 
 #next-slide, #prev-slide{
@@ -663,16 +680,23 @@ nav{
   width:2rem;
   border-radius: 8px;
   height:2rem;
-  background-color: rgb(165, 161, 161,0.5);
+  background-color: rgba(24, 67, 26, 0.5);
   border: none;
-  padding:30px 0px;
+  padding:25px 10px;
   display:flex;
   align-items: center;
   justify-content: center;
+  color: white;
+}
+#next-slide{
+  margin-right: 5px;
+}
+#prev-slide{
+  margin-left: 5px;
 }
 
 #next-slide:hover, #prev-slide:hover{
-  background-color: rgb(165, 161, 161,0.8);
+  background-color: rgba(7, 37, 8, 0.8);
   color:white;
 }
 
@@ -758,8 +782,6 @@ footer{
 }
 
 
-
-
 .bottom-bar{
   background-color: rgb(2, 81, 81);
   display: flex;
@@ -791,25 +813,22 @@ footer{
         padding-top: 1rem;
    
     }
+    
 
     nav{
       justify-content: flex-start;
       gap: 2rem;
     } 
-    .dropdown:hover .dropdown-content{
+    .dropdown:hover .dropdown-content {
       max-height: 250px;
       overflow: visible;
     }
     
 
-    .nested-dropdown:hover .nested-dropdown-content{
+    .nested-dropdown:hover .nested-dropdown-content, #navbar.active .nested-dropdown-content{
       max-height: 300px;
       
     }
   }
 
-  /* @media screen and (max-width: 300px){
-    .nested-dropdown-content{
-      left:1.3rem;
-    }
-  } */
+  

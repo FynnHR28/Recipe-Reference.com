@@ -1,4 +1,4 @@
-const breakfastSlides = ['/Resources/Imgs/breakfast-slideshow/americanB.jpg',
+const breakfastSlides = [
                          './Resources/Imgs/breakfast-slideshow/chilaquilesB.jpg',
                          './Resources/Imgs/breakfast-slideshow/avocado.jpg',
                          './Resources/Imgs/breakfast-slideshow/japaneseB.jpg',
