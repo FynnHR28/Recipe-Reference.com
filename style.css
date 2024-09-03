@@ -40,7 +40,6 @@ nav{
 #logo{
     width:10%;
     padding: 0.4rem;
-    
     border-radius: 0.2rem;  
     min-width: 50px;
     max-width: 70px;
@@ -87,19 +86,15 @@ nav{
 /* Button styles */
 .std-btn {
     color:rgb(253, 249, 249);
-    padding: 8px;
-    font-size: 1rem;
+    font-size: 1.2em;
     border: none;
     background-color: rgb(241, 246, 248,0);
-    border-radius: 20px;
-    border: 5px solid rgb(255,255,255,0.8);
     transition: 0.4s;
+   
   }
 
   .std-btn:hover {
-    font-size: 1.1rem;
-    background-color: rgb(81,79,79,0.8);
-    border: 5px solid rgb(255,255,255,1)
+    transform: scale(1.1);  
   }
   
   /* Dropdown Content (Hidden by Default) */
@@ -146,11 +141,11 @@ nav{
   background-size: cover; /* Adjusts the background image size to cover the container */
   background-position: center;
   background-repeat: no-repeat;
-  position: absolute;
+  position: fixed;
   top: 4.2rem;
   width: 100%;
   height: 100%;
-  filter: blur(4px);
+  filter: blur(3px);
   z-index: -1;
  
 }
@@ -606,12 +601,18 @@ nav{
 #slideshow-wrapper{
   background-color: rgba(68, 122, 78, 0.5);
   height: 500px;
+  padding-left: 5px;
+  display: flex;
+  margin-top: 4rem;
+  justify-content: center;
+  border: 6px solid transparent;
+  border-image: linear-gradient(to right, rgba(97, 32, 27, 0.7),rgb(227, 145, 145));
+  border-image-slice: 1;
 }
 
 #breakfast-slideshow{
   position:relative;
-  margin-top: 4rem;
-  width:100%;
+  width:65%;
   height:500px;
   overflow: hidden;
   display: flex;
@@ -622,18 +623,18 @@ nav{
 }
 
 #slideshow-label{
-  backdrop-filter: blur(10px);
-  border-radius: 25px;
-  min-width: 180px;
-  margin: 10px;
-  line-height: 1.3em;
-  color: black;
   position: relative;
-  top: -11rem;
-  width: 20%;
-  padding: 10px;
-  color:rgb(25, 15, 63);
-  
+  width: 35%;
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+  color: rgb(249, 239, 239);
+  font-size: 2em; 
+}
+#slideshow-label p {
+  background-color: rgba(97, 32, 27, 0.6);
+  padding: 20px;
+  border-radius: 7px;
 }
 
 #slide{
@@ -644,6 +645,7 @@ nav{
   opacity: 1;
   transition: 0.5s ease;
   animation: fadeIn 1s; 
+  border-radius: 30px;
 }
 
 @keyframes fadeIn {
@@ -671,28 +673,29 @@ nav{
   object-fit: cover;
   z-index: -1;
   margin: auto;
-  border-radius: 4px;
-  border: 4px solid rgb(227, 156, 145);
+  border-radius: 25px;
+  border: 4px solid rgb(9, 60, 9, 0.6);
 }
 
 #next-slide, #prev-slide{
   position: relative;
+  top: 13rem;
   width:2rem;
   border-radius: 8px;
-  height:2rem;
+  height:1rem;
   background-color: rgba(24, 67, 26, 0.5);
   border: none;
-  padding:25px 10px;
+  padding:10px 25px;
   display:flex;
   align-items: center;
   justify-content: center;
   color: white;
 }
 #next-slide{
-  margin-right: 5px;
+  right: 33%;
 }
 #prev-slide{
-  margin-left: 5px;
+  left: 33%;
 }
 
 #next-slide:hover, #prev-slide:hover{
@@ -737,7 +740,8 @@ nav{
 
 #home-intro{
   border: 2px solid rgb(1,100,100, 1);
-  width: 70%;  
+  width: 60%;
+  max-width: 600px;
 }
 
 #about-me{
